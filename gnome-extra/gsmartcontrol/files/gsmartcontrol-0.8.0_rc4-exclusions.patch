@@ -1,0 +1,11 @@
+--- gsmartcontrol-0.8.0rc4/src/gsc_settings.h
++++ gsmartcontrol-0.8.0rc4/src/gsc_settings.h
+@@ -39,7 +39,7 @@
+ 	rconfig::set_default_data("system/solaris_dev_path", "/dev/rdsk");  // path to /dev/rdsk for solaris.
+ 	rconfig::set_default_data("system/unix_sdev_path", "/dev");  // path to /dev. used by other unices
+ // 	rconfig::set_default_data("system/device_match_patterns", "");  // semicolon-separated PCRE patterns
+-	rconfig::set_default_data("system/device_blacklist_patterns", "md%3Bmapper");  // semicolon-separated PCRE patterns
++	rconfig::set_default_data("system/device_blacklist_patterns", "");  // semicolon-separated PCRE patterns
+ 
+ 	rconfig::set_default_data("gui/show_smart_capable_only", false);  // show smart-capable drives only
+ 	rconfig::set_default_data("gui/scan_on_startup", true);  // scan drives on startup
