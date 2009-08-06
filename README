@@ -1,7 +1,8 @@
 To use this overlay:
 
-1) Add http://source.sjkwi.com.au/hg/gentoo-overlay/raw-file/tip/overlay.xml to 
-   your list of overlay definitions files in layman.cfg. It should resemble this:
+1) Add http://source.sjkwi.com.au/hg/gentoo-overlay/raw-file/tip/overlay.xml 
+   to your list of overlay definitions files in /etc/layman/layman.cfg.
+   It should resemble this:
 
      overlays  : http://www.gentoo.org/proj/en/overlays/layman-global.txt
                  http://source.sjkwi.com.au/hg/gentoo-overlay/raw-file/tip/overlay.xml
