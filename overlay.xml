@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layman>
+    <overlay contact="sam@sjkwi.com.au"
+             name="sjkwi"
+             src="http://source.sjkwi.com.au/hg/gentoo-overlay"
+             type="mercurial">
+        <link>http://www.sjkwi.com.au/</link>
+        <description>SJKWI Portage overlay</description>
+    </overlay>
+</layman>
