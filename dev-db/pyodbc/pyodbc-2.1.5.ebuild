@@ -17,7 +17,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="mssql"
 
 DEPEND=">=dev-lang/python-2.4
-	>=dev-db/unixODBC-2.2.11-r1"
+	>=dev-db/unixODBC-2.2.11-r1
+	app-arch/unzip"
 RDEPEND="${DEPEND}
 	mssql? ( >=dev-db/freetds-0.62.3[odbc] )"
 
