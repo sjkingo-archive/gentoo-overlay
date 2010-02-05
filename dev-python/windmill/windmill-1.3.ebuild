@@ -6,7 +6,7 @@ EAPI=2
 NEED_PYTHON=2.6
 PYTHON_MODNAME="windmill windmill2"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Web testing framework intended for complete automation of user interface testing"
 HOMEPAGE="http://www.getwindmill.com/"
@@ -22,3 +22,8 @@ RDEPEND="
     dev-python/setuptools
     ssl? ( dev-python/pyopenssl )
     "
+
+src_prepare() {
+	distutils_src_prepare
+	epatch "${FILESDIR}/${PN}-1.3-disable-ubuntu-hax.patch"
+}

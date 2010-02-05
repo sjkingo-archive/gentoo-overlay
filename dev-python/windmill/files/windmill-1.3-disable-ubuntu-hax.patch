@@ -1,0 +1,11 @@
+--- windmill/dep/_mozrunner/runner.py	2010-02-05 15:31:48.000000000 +1000
++++ windmill/dep/_mozrunner/runner.py	2010-02-05 15:32:07.000000000 +1000
+@@ -171,7 +171,7 @@
+     
+     def set_binary(self, binary):
+         """Set the binary path and do any cleanup or platform specific hacks"""
+-        if sys.platform == 'linux2':    
++        if False:
+             # This block is to fix Ubuntu's stupid shell script that breaks a bunch of options
+             new_bin = open(binary, 'r').read()
+             new_bin = new_bin.replace('$0', 'firefox')
