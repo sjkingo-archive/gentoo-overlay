@@ -1,7 +1,7 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-PYTHON_DEPEND="2:2.5.2"
+PYTHON_DEPEND="2:2.5"
 
 inherit distutils eutils
 
