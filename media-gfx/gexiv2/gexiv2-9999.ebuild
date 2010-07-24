@@ -3,7 +3,7 @@ inherit mercurial eutils
 
 DESCRIPTION="GObject wrapper for exiv2, with Vala bindings"
 HOMEPAGE="http://trac.yorba.org/wiki/gexiv2"
-#SRC_URI="http://yorba.org/download/gexiv2/0.1/${P}.tar.bz2"
+#SRC_URI="http://yorba.org/download/gexiv2/0.1/lib${P}.tar.bz2"
 EHG_REPO_URI="http://code.djc.id.au/hg/gexiv2"
 
 LICENSE="GPL-2"
