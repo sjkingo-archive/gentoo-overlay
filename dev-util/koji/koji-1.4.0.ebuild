@@ -1,0 +1,35 @@
+
+EAPI=3
+PYTHON_DEPEND="2"
+
+inherit python
+
+DESCRIPTION="Build tool for the Fedora project"
+HOMEPAGE="https://fedorahosted.org/koji/"
+SRC_URI="https://fedorahosted.org/releases/k/o/koji/${P}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~amd64"
+IUSE="minimal"
+
+DEPEND="
+	app-arch/rpm
+	"
+RDEPEND="
+	${DEPEND}
+	dev-python/pyopenssl
+	"
+
+src_compile() {
+	true # nothing!
+}
+
+src_install() {
+	if use minimal ; then
+		emake -j1 -C koji install DESTDIR="${D}" || die
+	else
+		emake -j1 install DESTDIR="${D}" || die
+	fi
+	find "${D}" \( -name \*.pyc -or -name \*.pyo \) -exec rm {} \+ || die
+}
