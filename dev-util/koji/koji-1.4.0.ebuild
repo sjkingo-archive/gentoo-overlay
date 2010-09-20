@@ -21,6 +21,10 @@ RDEPEND="
 	dev-python/pyopenssl
 	"
 
+src_prepare() {
+	sed -i -e 's/\tinstall/\tinstall -D/' "${S}/cli/Makefile" || die
+}
+
 src_compile() {
 	true # nothing!
 }
@@ -28,6 +32,7 @@ src_compile() {
 src_install() {
 	if use minimal ; then
 		emake -j1 -C koji install DESTDIR="${D}" || die
+		emake -j1 -C cli install DESTDIR="${D}" || die
 	else
 		emake -j1 install DESTDIR="${D}" || die
 	fi
