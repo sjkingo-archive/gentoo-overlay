@@ -21,6 +21,7 @@ RDEPEND="
 	dev-python/pycurl
 	dev-python/urlgrabber
 	dev-util/koji
+	dev-python/offtrac
 	"
 
 src_configure() {
