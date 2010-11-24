@@ -3,8 +3,9 @@
 # $Header: $
 
 EAPI=2
-NEED_PYTHON=2.6
 PYTHON_MODNAME="windmill windmill2"
+
+PYTHON_DEPEND="2:2.6"
 
 inherit distutils eutils
 

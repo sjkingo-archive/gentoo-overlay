@@ -3,7 +3,7 @@
 # $Header: $
 EAPI="2"
 
-NEED_PYTHON=2.4
+PYTHON_DEPEND="2"
 
 inherit distutils
 
