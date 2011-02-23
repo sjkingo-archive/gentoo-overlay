@@ -31,8 +31,16 @@ pkg_setup() {
 	python_pkg_setup
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/${P}-repos_persistdir.patch"
+}
+
+src_compile() {
+	emake -j1 || die
+}
+
 src_install() {
-	emake install DESTDIR="${D}" || die
+	emake -j1 install DESTDIR="${D}" || die
 	rm -r "${ED}etc/rc.d" || die
 	find "${ED}" -name '*.py[co]' -print0 | xargs -0 rm -f
 
