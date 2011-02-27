@@ -1,0 +1,23 @@
+--- Makefile.orig	2011-02-28 09:06:20.456211217 +1000
++++ Makefile	2011-02-28 09:11:32.428211217 +1000
+@@ -33,18 +33,16 @@
+ 	if [ "x${COMPILE_PYC}" = "x1" ] ; then \
+ 		$(PYTHON) -m py_compile [A-Z]*.py __*__.py ; \
+ 	fi
+-	$(PYTHON) -O -m py_compile [A-Z]*.py __*__.py
++	if false ; then $(PYTHON) -O -m py_compile [A-Z]*.py __*__.py ; fi
+ 
+ clean:
+ 	rm -f *~ *.pyc *.pyo $(GENERATED)
+ 
+ install: all
+ 	mkdir -p $(DESTDIR)$(LIBDIR) $(DESTDIR)$(BINDIR) $(DESTDIR)$(ETCDIR)/$(PACKAGE) $(DESTDIR)$(ETCDIR)/bash_completion.d $(DESTDIR)$(MANDIR)/man1
+-	-cp -p *.pyc $(DESTDIR)$(LIBDIR)
+-	cp -p *.py *.pyo $(DESTDIR)$(LIBDIR)
++	cp -p *.py $(DESTDIR)$(LIBDIR)
+ 	cp -p rpmlint rpmdiff $(DESTDIR)$(BINDIR)
+ 	cp -p config $(DESTDIR)$(ETCDIR)/$(PACKAGE)
+-	cp -p rpmlint.bash-completion $(DESTDIR)$(ETCDIR)/bash_completion.d/rpmlint
+ 	cp -p rpmlint.1 $(DESTDIR)$(MANDIR)/man1/rpmlint.1
+ 
+ verify:
