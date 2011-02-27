@@ -1,0 +1,13 @@
+http://bugs.gentoo.org/show_bug.cgi?id=356769
+
+--- macros.in.orig	2011-02-28 09:40:46.582003365 +1000
++++ macros.in	2011-02-28 09:40:53.716003365 +1000
+@@ -227,7 +227,7 @@
+ %buildroot		%{_buildrootdir}/%{name}-%{version}-%{release}.%{_arch}
+ 
+ #	Directory where temporaray files can be created.
+-%_tmppath		%{_var}/tmp
++%_tmppath		/var/tmp
+ 
+ #	Path to top of build area.
+ %_topdir		%{getenv:HOME}/rpmbuild
