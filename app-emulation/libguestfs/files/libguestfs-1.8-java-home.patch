@@ -1,0 +1,11 @@
+--- configure.ac.orig	2010-11-09 07:52:55.000000000 +0200
++++ configure.ac	2010-11-09 07:53:25.000000000 +0200
+@@ -760,7 +750,7 @@
+ AC_SUBST(JNI_INSTALL_DIR)
+ AC_SUBST(JNI_VERSION_INFO)
+ 
+-AM_CONDITIONAL([HAVE_JAVA],[test -n "$JAVAC"])
++AM_CONDITIONAL([HAVE_JAVA],[test -n "$JAVAC" -a "x$with_java_home" != "xno"])
+ 
+ dnl Check for Haskell (GHC).
+ GHC=no
