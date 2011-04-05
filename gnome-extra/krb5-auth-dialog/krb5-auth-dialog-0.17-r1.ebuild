@@ -3,7 +3,7 @@
 
 EAPI=3
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Tray applet for the GNOME desktop that monitors Kerberos tickets"
 HOMEPAGE="https://honk.sigxcpu.org/piki/projects/krb5-auth-dialog/"
@@ -30,4 +30,8 @@ pkg_setup() {
 		$(use_with libnotify)
 		$(use_with pam)
 		"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-libnotify.patch"
 }

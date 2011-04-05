@@ -1,0 +1,19 @@
+From Fedora, commit 6f127863
+
+diff -up krb5-auth-dialog-0.16/src/ka-applet.c.notify krb5-auth-dialog-0.16/src/ka-applet.c
+--- krb5-auth-dialog-0.16/src/ka-applet.c.notify	2010-11-03 15:11:55.363241998 -0400
++++ krb5-auth-dialog-0.16/src/ka-applet.c	2010-11-03 15:12:13.249241985 -0400
+@@ -489,10 +489,9 @@ ka_send_event_notification (KaApplet *ap
+ 	notify_icon = icon ? icon : "krb-valid-ticket";
+ 
+ 	applet->priv->notification = \
+-		notify_notification_new_with_status_icon(summary,
+-							 message,
+-							 notify_icon,
+-							 applet->priv->tray_icon);
++		notify_notification_new(summary,
++					message,
++					notify_icon);
+ 
+ 	notify_notification_set_urgency (applet->priv->notification, NOTIFY_URGENCY_NORMAL);
+ 	notify_notification_add_action (applet->priv->notification,
