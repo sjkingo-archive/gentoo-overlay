@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=3
 inherit distutils eutils
 
-EAPI=2
 PYTHON_DEPEND="2:2.6"
 
 DESCRIPTION="Python implementation of the Munkres Algorithm, for solving the Assignment Problem"

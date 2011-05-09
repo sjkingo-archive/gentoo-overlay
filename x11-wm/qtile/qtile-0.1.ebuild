@@ -3,6 +3,7 @@
 
 PYTHON_DEPEND="2:2.5"
 
+EAPI=3
 inherit distutils eutils
 
 DESCRIPTION="A full-featured, pure-Python tiling window manager."

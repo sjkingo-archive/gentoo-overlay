@@ -1,6 +1,7 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
+EAPI=3
 inherit distutils
 
 DESCRIPTION="Python port of John Gruber's smartypants plugin"

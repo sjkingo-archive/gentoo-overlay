@@ -2,9 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=3
+
 inherit distutils versionator mercurial
 
-EAPI=2
 PYTHON_DEPEND="2:2.6"
 
 # rename the package due to upstream conventions
