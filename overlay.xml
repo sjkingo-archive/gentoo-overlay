@@ -2,7 +2,7 @@
 <layman>
     <overlay contact="sam@sjkwi.com.au"
              name="sjkwi"
-             src="http://source.sjkwi.com.au/hg/gentoo-overlay"
+             src="https://bitbucket.org/sjkingo/gentoo-overlay"
              type="mercurial">
         <link>http://www.sjkwi.com.au/</link>
         <description>SJKWI Portage overlay</description>
