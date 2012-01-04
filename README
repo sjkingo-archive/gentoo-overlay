@@ -1,11 +1,11 @@
 To use this overlay:
 
-1) Add https://bitbucket.org/sjkingo/gentoo-overlay/raw/tip/overlay.xml
+1) Add https://raw.github.com/sjkingo/gentoo-overlay/master/overlay.xml
    to your list of overlay definitions files in /etc/layman/layman.cfg.
    It should resemble this:
 
      overlays  : http://www.gentoo.org/proj/en/overlays/layman-global.txt
-                 https://bitbucket.org/sjkingo/gentoo-overlay/raw/tip/overlay.xml
+                 https://raw.github.com/sjkingo/gentoo-overlay/master/overlay.xml
 
 2) Tell layman to resync its overlay lists, and then fetch the sjkwi overlay:
 
