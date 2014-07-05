@@ -2,7 +2,7 @@
 EAPI=3
 PYTHON_DEPEND="2"
 
-inherit git distutils
+inherit git-2 distutils
 
 DESCRIPTION="A tool for managing rpm based git projects"
 HOMEPAGE="http://rm-rf.ca/tito"
